@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PoolDetailsHeader loading skeleton is shown 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.c2 {
+  border-radius: 12px;
+  border-radius: 12px;
+  height: 24px;
+  width: 50%;
+  width: 50%;
+  -webkit-animation: fAQEyV 1.5s infinite;
+  animation: fAQEyV 1.5s infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  background: linear-gradient( to left, #22222212 25%, rgba(53,53,53,0.07) 50%, #22222212 75% );
+  will-change: background-position;
+  background-size: 400%;
+}
+
+.c4 {
+  height: 16px;
+  width: 137px;
+}
+
+.c3 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+<div
+    class="c0 c1"
+    data-testid="pdp-header-loading-skeleton"
+  >
+    <div
+      class="c2 c3"
+    />
+    <div
+      class="c2 c4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PoolDetailsHeader renders breadcrumb text correctly 1`] = `
+<DocumentFragment>
+  .c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #222222;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #7D7D7D;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  color: #CECECE;
+}
+
+.c4 {
+  gap: 6px;
+}
+
+.c5 {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.c6 {
+  cursor: pointer;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+<nav
+    aria-label="breadcrumb-nav"
+    class="c0"
+  >
+    <a
+      class="c1"
+      href="/explore/ethereum"
+    >
+      Explore 
+      <svg
+        fill="none"
+        height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+    </a>
+    <a
+      class="c1"
+      href="/explore/pools/ethereum"
+    >
+      Pools 
+      <svg
+        fill="none"
+        height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+    </a>
+    <div
+      aria-current="page"
+      class="c2 c3 c4"
+      data-testid="current-breadcrumb"
+    >
+      <h1
+        class="c5"
+      >
+        USDC / WETH
+      </h1>
+       
+      <div
+        class="c2 c3 c6"
+        data-testid="breadcrumb-token-address"
+      >
+        ( 0x88e6...5640 )
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`PoolDetailsHeader renders header text correctly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.c3 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.c7 {
+  color: #222222;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+}
+
+.c9 {
+  color: #7D7D7D;
+  -webkit-letter-spacing: -0.01em;
+  -moz-letter-spacing: -0.01em;
+  -ms-letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
+}
+
+.c10 {
+  background: #F9F9F9;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.c11 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+  fill: #7D7D7D;
+}
+
+.c11:hover {
+  opacity: 0.6;
+}
+
+.c11:active {
+  opacity: 0.4;
+}
+
+.c8 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c8:hover {
+  opacity: 0.6;
+}
+
+.c8:active {
+  opacity: 0.4;
+}
+
+.c4 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.c5 img {
+  width: 16px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.c5 img:first-child {
+  border-radius: 16px 0 0 16px;
+  object-position: 0 0;
+}
+
+.c5 img:last-child {
+  border-radius: 0 16px 16px 0;
+  object-position: 100% 0;
+}
+
+.c6 {
+  width: 16px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+<div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3"
+      width="max-content"
+    >
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+          size="32"
+        >
+          <img
+            class="c6"
+            size="32"
+            src="https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+          />
+          <img
+            class="c6"
+            size="32"
+            src="https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+          />
+        </div>
+      </div>
+      <div
+        class="c7 css-1jyz67g"
+      >
+        <a
+          class="c8"
+          href="/explore/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        >
+          USDC
+        </a>
+         / 
+        <a
+          class="c8"
+          href="/explore/tokens/ethereum/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+        >
+          WETH
+        </a>
+      </div>
+    </div>
+    <div
+      class="c9 c10 css-1m65e73"
+    >
+      0.05%
+    </div>
+    <svg
+      class="c11"
+      data-testid="toggle-tokens-reverse-arrows"
+      fill="none"
+      height="20"
+      viewBox="0 0 20 20"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.05836 6.27468C2.00086 6.21718 1.95514 6.14789 1.92348 6.07123C1.86014 5.91873 1.86014 5.74623 1.92348 5.59373C1.95514 5.51706 2.00086 5.44798 2.05836 5.39048L5.3917 2.05715C5.63586 1.81298 6.03173 1.81298 6.27589 2.05715C6.52006 2.30132 6.52006 2.69718 6.27589 2.94134L4.00925 5.20799H14.1667C14.5117 5.20799 14.7917 5.48799 14.7917 5.83299C14.7917 6.17799 14.5117 6.45799 14.1667 6.45799H4.00925L6.27589 8.72463C6.52006 8.9688 6.52006 9.36466 6.27589 9.60882C6.15423 9.73049 5.9942 9.79213 5.8342 9.79213C5.6742 9.79213 5.51418 9.73132 5.39251 9.60882L2.05836 6.27468ZM18.0766 13.9271C18.045 13.8504 17.9992 13.7813 17.9417 13.7238L14.6084 10.3905C14.3642 10.1463 13.9684 10.1463 13.7242 10.3905C13.4801 10.6346 13.4801 11.0305 13.7242 11.2747L15.9909 13.5413H5.83339C5.48839 13.5413 5.20839 13.8213 5.20839 14.1663C5.20839 14.5113 5.48839 14.7913 5.83339 14.7913H15.9909L13.7242 17.058C13.4801 17.3021 13.4801 17.698 13.7242 17.9422C13.8459 18.0638 14.0059 18.1255 14.1659 18.1255C14.3259 18.1255 14.4859 18.0647 14.6076 17.9422L17.9409 14.6088C17.9984 14.5513 18.0442 14.4822 18.0758 14.4056C18.14 14.2522 18.14 14.0804 18.0766 13.9271Z"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;

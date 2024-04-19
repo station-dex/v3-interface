@@ -1,0 +1,736 @@
+{
+  "name": "Station DEX Token List",
+  "timestamp": "2024-04-05T17:56:24.529Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://static.stationdex.com/static/images/loader.png",
+  "keywords": ["StationDEX", "testnet", "fake erc20"],
+  "tokens": [
+    {
+      "name": "Wrapped Bitcoin",
+      "chainId": 195,
+      "symbol": "WBTC",
+      "decimals": 8,
+      "mintCap": 0.1,
+      "address": "0xD9F8868E1121A079a0e38F10f258ab46b6c089D0",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/btc.svg"
+    },
+    {
+      "name": "Station DEX",
+      "chainId": 195,
+      "symbol": "XSTN",
+      "decimals": 18,
+      "address": "0xf2718dD4313A6Fe4aD2755f912c94Af223871EAB",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/xstn.svg"
+    },
+    {
+      "name": "Neptune Mutual",
+      "chainId": 195,
+      "symbol": "NPM",
+      "decimals": 18,
+      "address": "0x949bd4af619BEF4BD91D34Fdc05F86Da231A9f92",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/npm.svg"
+    },
+    {
+      "name": "USD Coin",
+      "chainId": 195,
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0x7bBa099eb3050880DBbc1b42eB7Ef8A3Ff1EB248",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/usdc.svg"
+    },
+    {
+      "name": "USD Tether",
+      "chainId": 195,
+      "symbol": "USDT",
+      "decimals": 18,
+      "mintCap": 2000,
+      "address": "0xeb45D32425a02a5A9d8500375932f1cCe5781b96",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/usdt.svg"
+    },
+    {
+      "name": "1Inch",
+      "chainId": 195,
+      "symbol": "1INCH",
+      "decimals": 18,
+      "address": "0xA48f457bde7C36781365b85B40D66CeC822AA93b",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/1inch.svg"
+    },
+    {
+      "name": "AaveToken",
+      "chainId": 195,
+      "symbol": "AAVE",
+      "decimals": 18,
+      "address": "0x66fa2CC49564053f50bD5981C832a85fa361CbE8",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/aave.svg"
+    },
+    {
+      "name": "Amp",
+      "chainId": 195,
+      "symbol": "AMP",
+      "decimals": 18,
+      "address": "0x53D7d48D44e631E78941056a241c1EB3b10d5FB9",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/amp.svg"
+    },
+    {
+      "name": "Balancer",
+      "chainId": 195,
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0x9Ff19b36f6fD1B2f7d94Efd16e6294b5EFd19499",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/bal.svg"
+    },
+    {
+      "name": "BasicAttentionToken",
+      "chainId": 195,
+      "symbol": "BAT",
+      "decimals": 18,
+      "address": "0xB7fd314c7725D0F784eBd0f709a5Fc765575ebCe",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/bat.svg"
+    },
+    {
+      "name": "Bancor",
+      "chainId": 195,
+      "symbol": "BNT",
+      "decimals": 18,
+      "address": "0xc37F9Fa9fDdA4832F9Efc94bf616d18A7553FEeB",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/bnt.svg"
+    },
+    {
+      "name": "Compound",
+      "chainId": 195,
+      "symbol": "COMP",
+      "decimals": 18,
+      "address": "0x3743E702D3148BA38A0683DF92D6f939c7603BE7",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/comp.svg"
+    },
+    {
+      "name": "CurveDAOToken",
+      "chainId": 195,
+      "symbol": "CRV",
+      "decimals": 18,
+      "address": "0x40f8f30b07ff002b4F79a59AC076Bd7a0d172854",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/crv.svg"
+    },
+    {
+      "name": "DaiStablecoin",
+      "chainId": 195,
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x510F26d36A6ec83E253737C67E1204E404714fe2",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/dai.svg"
+    },
+    {
+      "name": "Enjin",
+      "chainId": 195,
+      "symbol": "ENJ",
+      "decimals": 18,
+      "address": "0x346A05E783c5E5398f1618B49b08383191D270f9",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/enj.svg"
+    },
+    {
+      "name": "The Graph",
+      "chainId": 195,
+      "symbol": "GRT",
+      "decimals": 18,
+      "address": "0x76fE48A452198CACF0f5A99cA9ac1aCa72951092",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/grt.svg"
+    },
+    {
+      "name": "GeminiDollar",
+      "chainId": 195,
+      "symbol": "GUSD",
+      "decimals": 2,
+      "address": "0xfacc17Db635b657391ed6B71fF715e750DD13252",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/gusd.svg"
+    },
+    {
+      "name": "KyberNetwork",
+      "chainId": 195,
+      "symbol": "KNC",
+      "decimals": 18,
+      "address": "0x3Fe4F79d9dd317Ed9C9A9632465ca2110bbaf2BA",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/knc.svg"
+    },
+    {
+      "name": "Chainlink",
+      "chainId": 195,
+      "symbol": "LINK",
+      "decimals": 18,
+      "address": "0xaE226f7b268F72aC34a217a52cA0ed1e03c24542",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/link.svg"
+    },
+    {
+      "name": "Loopring",
+      "chainId": 195,
+      "symbol": "LRC",
+      "decimals": 18,
+      "address": "0x1af4e3a6CbabFE9317784e79B301DC827AD93C47",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/lrc.svg"
+    },
+    {
+      "name": "Decentraland",
+      "chainId": 195,
+      "symbol": "MANA",
+      "decimals": 18,
+      "address": "0x3C5f3DF3Bf90Ac723f59F5150aF7b5591E5753F4",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/mana.svg"
+    },
+    {
+      "name": "Maker",
+      "chainId": 195,
+      "symbol": "MKR",
+      "decimals": 18,
+      "address": "0x6C021b049b47f59147cf5A2463D0b92591473b78",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/mkr.svg"
+    },
+    {
+      "name": "Orchid",
+      "chainId": 195,
+      "symbol": "OXT",
+      "decimals": 18,
+      "address": "0xEa297477331443a20BE2eA57D9640b2BFAaDD5CD",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/oxt.svg"
+    },
+    {
+      "name": "PaxosGold",
+      "chainId": 195,
+      "symbol": "PAXG",
+      "decimals": 18,
+      "address": "0xBa2643c5Ea5C1898F557e6DBcfE2Eabf7805C9ac",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/paxg.svg"
+    },
+    {
+      "name": "Republic",
+      "chainId": 195,
+      "symbol": "REN",
+      "decimals": 18,
+      "address": "0x54d5E285EA2DB7E103e5E25d22FeE3eE9A0a3C0F",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ren.svg"
+    },
+    {
+      "name": "Sandbox",
+      "chainId": 195,
+      "symbol": "SAND",
+      "decimals": 18,
+      "address": "0xEED45b98D871fF7cA9654C2A449b33122B7dACad",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/sand.svg"
+    },
+    {
+      "name": "Skale",
+      "chainId": 195,
+      "symbol": "SKL",
+      "decimals": 18,
+      "address": "0xbA70D00fdDfe1fFA9D309571C35626C431C4BcaC",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/skl.svg"
+    },
+    {
+      "name": "Synthetix",
+      "chainId": 195,
+      "symbol": "SNX",
+      "decimals": 18,
+      "address": "0x5fA6bD07252a0514327DF93a1FDA6ECfE2bd7547",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/snx.svg"
+    },
+    {
+      "name": "Storj",
+      "chainId": 195,
+      "symbol": "STORJ",
+      "decimals": 8,
+      "address": "0x191BB48f0F99819cbdB818629061384cBEE76Aa5",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/storj.svg"
+    },
+    {
+      "name": "UMAVotingTokenv1",
+      "chainId": 195,
+      "symbol": "UMA",
+      "decimals": 18,
+      "address": "0x985106D798F63Db640f1344066fE60E2c51828Ed",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/uma.svg"
+    },
+    {
+      "name": "Uniswap",
+      "chainId": 195,
+      "symbol": "UNI",
+      "decimals": 18,
+      "address": "0x40F4Ee4CCC9978888205733f31de298899F8e877",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/uni.svg"
+    },
+    {
+      "name": "yearn.finance",
+      "chainId": 195,
+      "symbol": "YFI",
+      "decimals": 18,
+      "address": "0x00BC34d4F43e81833CDC43b2980B6E67dC04E530",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/yfi.svg"
+    },
+    {
+      "name": "0xProtocol",
+      "chainId": 195,
+      "symbol": "ZRX",
+      "decimals": 18,
+      "address": "0x723454BF0e06A6491C0EA594C64C77344a13BF67",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/zrx.svg"
+    },
+    {
+      "name": "BarnBridge",
+      "chainId": 195,
+      "symbol": "BOND",
+      "decimals": 18,
+      "address": "0x7DD1D83ABb9605917A49aBbdD35EEa8D012FeEB2",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/bond.svg"
+    },
+    {
+      "name": "Somnium Space",
+      "chainId": 195,
+      "symbol": "CUBE",
+      "decimals": 8,
+      "address": "0xfD39cb05Aae92aaaC45dC5B80aC5DD4f20CDD9B6",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/cube.svg"
+    },
+    {
+      "name": "Injective",
+      "chainId": 195,
+      "symbol": "INJ",
+      "decimals": 18,
+      "address": "0x4ccb88e23cF4948398b0dB4bae371c787d0Ac1AA",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/inj.svg"
+    },
+    {
+      "name": "Livepeer",
+      "chainId": 195,
+      "symbol": "LPT",
+      "decimals": 18,
+      "address": "0xdE772C9312F800Db4a98D6E1A9Aebf4d20faBd2d",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/lpt.svg"
+    },
+    {
+      "name": "Polygon",
+      "chainId": 195,
+      "symbol": "MATIC",
+      "decimals": 18,
+      "address": "0x9Caf987573c9A65A4D79b3f6965701CD849362f6",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/matic.svg"
+    },
+    {
+      "name": "Sushiswap",
+      "chainId": 195,
+      "symbol": "SUSHI",
+      "decimals": 18,
+      "address": "0x043B63b72232A2601C70733e1368cEa41B8394A6",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/sushi.svg"
+    },
+    {
+      "name": "Ankr Network",
+      "chainId": 195,
+      "symbol": "ANKR",
+      "decimals": 18,
+      "address": "0xb08965b641D5E8818B9fc1FeA5948324d5CC440E",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ankr.svg"
+    },
+    {
+      "name": "Fantom",
+      "chainId": 195,
+      "symbol": "FTM",
+      "decimals": 18,
+      "address": "0xD362E1F6b5227e06Ed379070F6eCc7d53a4dE0DE",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ftm.svg"
+    },
+    {
+      "name": "Alchemix",
+      "chainId": 195,
+      "symbol": "ALCX",
+      "decimals": 18,
+      "address": "0x08190C6746716E3f3B15787cF29F95cD0a84da3f",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/alcx.svg"
+    },
+    {
+      "name": "Cryptex Finance",
+      "chainId": 195,
+      "symbol": "CTX",
+      "decimals": 18,
+      "address": "0x29CBa0d2c1217E9D0683377f76D72D5cf4CFF616",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ctx.svg"
+    },
+    {
+      "name": "API3",
+      "chainId": 195,
+      "symbol": "API3",
+      "decimals": 18,
+      "address": "0xd58D1993913661a5f0E246B9f3C63EB7a902C7B0",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/api3.svg"
+    },
+    {
+      "name": "Wrapped Filecoin",
+      "chainId": 195,
+      "symbol": "EFIL",
+      "decimals": 18,
+      "address": "0x5efcFC355c33c660b0956e87a291736bE9517127",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/efil.svg"
+    },
+    {
+      "name": "Smooth Love Potion",
+      "chainId": 195,
+      "symbol": "SLP",
+      "decimals": 4,
+      "address": "0x9ED088A818E84f57D63742357E9Df3502F17cFD8",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/slp.svg"
+    },
+    {
+      "name": "Axie Infinity",
+      "chainId": 195,
+      "symbol": "AXS",
+      "decimals": 4,
+      "address": "0xd8243A0408BD6F07e82b28589aA6C015Fe448f6a",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/axs.svg"
+    },
+    {
+      "name": "Moss Carbon Credit",
+      "chainId": 195,
+      "symbol": "MCO2",
+      "decimals": 18,
+      "address": "0x3e633381Cf18eBAb915E4236E1c8B59893107eb5",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/mco2.svg"
+    },
+    {
+      "name": "Wrapped Centrifuge",
+      "chainId": 195,
+      "symbol": "wCFG",
+      "decimals": 18,
+      "address": "0xa023B95a1A06eB1154B0F3fDBdE057f9BCA14F1a",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/wcfg.svg"
+    },
+    {
+      "name": "Audius",
+      "chainId": 195,
+      "symbol": "AUDIO",
+      "decimals": 6,
+      "address": "0xc19e6A3326808a6Fdeb0EeF52De880682A852b5d",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/audio.svg"
+    },
+    {
+      "name": "Quant",
+      "chainId": 195,
+      "symbol": "QNT",
+      "decimals": 18,
+      "address": "0xC2872EFDD009a09790104A460466fA5ebe6EC637",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/qnt.svg"
+    },
+    {
+      "name": "Mask Network",
+      "chainId": 195,
+      "symbol": "MASK",
+      "decimals": 18,
+      "address": "0xF86eF8ff354c2A6c38d1Bcd373c185173ED0FEa9",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/mask.svg"
+    },
+    {
+      "name": "Radicle",
+      "chainId": 195,
+      "symbol": "RAD",
+      "decimals": 18,
+      "address": "0x0aF30eB96385465c40c7247b3064321dB91062f9",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/rad.svg"
+    },
+    {
+      "name": "Fetch.ai",
+      "chainId": 195,
+      "symbol": "FET",
+      "decimals": 18,
+      "address": "0x7C191702ab5c04b53A84734592f5cDfE17971D70",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/fet.svg"
+    },
+    {
+      "name": "Shiba Inu",
+      "chainId": 195,
+      "symbol": "SHIB",
+      "decimals": 18,
+      "address": "0x5dA3af07b67cfB4C04cCD21CDb141b34f8FA8365",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/shib.svg"
+    },
+    {
+      "name": "Numeraire",
+      "chainId": 195,
+      "symbol": "NMR",
+      "decimals": 18,
+      "address": "0x03a8f31E5dDb945B8981cFCfABac53a8C1d70835",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/nmr.svg"
+    },
+    {
+      "name": "Spell Token",
+      "chainId": 195,
+      "symbol": "SPELL",
+      "decimals": 18,
+      "address": "0xa93405330848D23b14FaFf537224A8Bd17de0121",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/spell.svg"
+    },
+    {
+      "name": "Magic Internet Money",
+      "chainId": 195,
+      "symbol": "MIM",
+      "decimals": 18,
+      "address": "0xE984b17F1136F37757E2eB18f0194D44ec9BD3aE",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/mim.svg"
+    },
+    {
+      "name": "Render Token",
+      "chainId": 195,
+      "symbol": "RNDR",
+      "decimals": 18,
+      "address": "0x05e5AA0E18D6a78D298fA1B7B58d1873B94C2bB2",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/rndr.svg"
+    },
+    {
+      "name": "Gala",
+      "chainId": 195,
+      "symbol": "GALA",
+      "decimals": 8,
+      "address": "0x181d37c83976BB202Eab1Efa7d28dd8B89f61b70",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/gala.svg"
+    },
+    {
+      "name": "Merit Circle",
+      "chainId": 195,
+      "symbol": "MC",
+      "decimals": 18,
+      "address": "0x41d4A397B5EE34cd99a3C9D2db70E5AfA5a0a599",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/mc.svg"
+    },
+    {
+      "name": "Ethereum Name Service",
+      "chainId": 195,
+      "symbol": "ENS",
+      "decimals": 18,
+      "address": "0x8E22f09B77DE4DbEA78A22b2f235dE464D88Dc6E",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ens.svg"
+    },
+    {
+      "name": "Keep3rV1",
+      "chainId": 195,
+      "symbol": "KP3R",
+      "decimals": 18,
+      "address": "0xddB3c842a23beB9509D9101F88F0E66e64dA2241",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/kp3r.svg"
+    },
+    {
+      "name": "Dogelon Mars",
+      "chainId": 195,
+      "symbol": "ELON",
+      "decimals": 18,
+      "address": "0xb235c0a21b924A03ECa25075eF3F9D7d93369B65",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/elon.svg"
+    },
+    {
+      "name": "Civic",
+      "chainId": 195,
+      "symbol": "CVC",
+      "decimals": 8,
+      "address": "0xE5859CE0f494D3d27e5079f66517684D3e4f278d",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/cvc.svg"
+    },
+    {
+      "name": "Tokemak",
+      "chainId": 195,
+      "symbol": "TOKE",
+      "decimals": 18,
+      "address": "0x689C664765DA4834B27BE5eb42dFe1abd80408E1",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/toke.svg"
+    },
+    {
+      "name": "Lido DAO",
+      "chainId": 195,
+      "symbol": "LDO",
+      "decimals": 18,
+      "address": "0xB28C982935d11C614DFeeb1F10E4780987ab3A7E",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ldo.svg"
+    },
+    {
+      "name": "Rally",
+      "chainId": 195,
+      "symbol": "RLY",
+      "decimals": 18,
+      "address": "0x010a1C52F0e37396bE50979Ea0995DFD93B3ceaD",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/rly.svg"
+    },
+    {
+      "name": "ApeCoin",
+      "chainId": 195,
+      "symbol": "APE",
+      "decimals": 18,
+      "address": "0xEf0d0E7fa3d236f2006CCdb18A5D3a8930B257D0",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ape.svg"
+    },
+    {
+      "name": "Liquity",
+      "chainId": 195,
+      "symbol": "LQTY",
+      "decimals": 18,
+      "address": "0xff02835f1da57C560812790Fc46732E471E34f50",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/lqty.svg"
+    },
+    {
+      "name": "Liquity USD",
+      "chainId": 195,
+      "symbol": "LUSD",
+      "decimals": 18,
+      "address": "0xa5d6108b00ad13E004E0214D673F60AE620E5bF0",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/lusd.svg"
+    },
+    {
+      "name": "Maple Finance",
+      "chainId": 195,
+      "symbol": "MPL",
+      "decimals": 18,
+      "address": "0x0459Ce1514926c0443c40E0785698BFf7196F83e",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/mpl.svg"
+    },
+    {
+      "name": "Ribbon Finance",
+      "chainId": 195,
+      "symbol": "RBN",
+      "decimals": 18,
+      "address": "0x173861545641cc0805D12F53313C00b8F375615b",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/rbn.svg"
+    },
+    {
+      "name": "DeFi Pulse Index",
+      "chainId": 195,
+      "symbol": "DPI",
+      "decimals": 18,
+      "address": "0x4447bD55a5f792f46a756b16CAe5d3bb524D16dC",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/dpi.svg"
+    },
+    {
+      "name": "Index Cooperative",
+      "chainId": 195,
+      "symbol": "INDEX",
+      "decimals": 18,
+      "address": "0x3b62F157ec25ADb1Ad9a7aa477f5b6C62A7Bc0a7",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/index.svg"
+    },
+    {
+      "name": "Chiliz",
+      "chainId": 195,
+      "symbol": "CHZ",
+      "decimals": 18,
+      "address": "0xF7f1AAF77d984812F35aB01bF574CbB789e1BFF3",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/chz.svg"
+    },
+    {
+      "name": "Metis",
+      "chainId": 195,
+      "symbol": "METIS",
+      "decimals": 18,
+      "address": "0x83b1198019AbAA17C9091822174FEcdCEc88A889",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/metis.svg"
+    },
+    {
+      "name": "Qredo",
+      "chainId": 195,
+      "symbol": "QRDO",
+      "decimals": 8,
+      "address": "0x4E1faa0dEDbece91E8ACFADbf2245229F44987fC",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/qrdo.svg"
+    },
+    {
+      "name": "Revv",
+      "chainId": 195,
+      "symbol": "REVV",
+      "decimals": 18,
+      "address": "0xB9e996Ff1355BF9579CB32eE579121F367d01a89",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/revv.svg"
+    },
+    {
+      "name": "Geojam",
+      "chainId": 195,
+      "symbol": "JAM",
+      "decimals": 18,
+      "address": "0xA475B2Ec7a9B43c037653392B2175160Ba5109Af",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/jam.svg"
+    },
+    {
+      "name": "Goldfinch",
+      "chainId": 195,
+      "symbol": "GFI",
+      "decimals": 18,
+      "address": "0x427b4AcF914Ef0a983C25C24A0AD8CEf3e1D0644",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/gfi.svg"
+    },
+    {
+      "name": "TrueFi",
+      "chainId": 195,
+      "symbol": "TRU",
+      "decimals": 8,
+      "address": "0xBdF56DC45D7f9401F4d50EC21991412548f4b5Cf",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/tru.svg"
+    },
+    {
+      "name": "Alethea Artificial Liquid Intelligence",
+      "chainId": 195,
+      "symbol": "ALI",
+      "decimals": 8,
+      "address": "0xdC9AAA8f72eb4C547C458ec76200c3d93c95886E",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ali.svg"
+    },
+    {
+      "name": "Ethernity",
+      "chainId": 195,
+      "symbol": "ERN",
+      "decimals": 18,
+      "address": "0x09f6Cab86831C8B5E1e13C18479BF588706E992E",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/ern.svg"
+    },
+    {
+      "name": "Euler Finance",
+      "chainId": 195,
+      "symbol": "EUL",
+      "decimals": 18,
+      "address": "0x11ef18396CEF1C69DC3b0029c5a0cF2cbAab0Fc4",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/eul.svg"
+    },
+    {
+      "name": "Project Galaxy",
+      "chainId": 195,
+      "symbol": "GAL",
+      "decimals": 18,
+      "address": "0x62BcCc35A277227D7fbB53a2c870e9Be7C21E693",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/gal.svg"
+    },
+    {
+      "name": "Biconomy",
+      "chainId": 195,
+      "symbol": "BICO",
+      "decimals": 18,
+      "address": "0x1b0585eaDf2Fd19FB864a8b783E07995bF24567D",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/bico.svg"
+    },
+    {
+      "name": "Immutable X",
+      "chainId": 195,
+      "symbol": "IMX",
+      "decimals": 18,
+      "address": "0x1E6907711aD4e2120cCC8B7AEEF3435676CF3C31",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/imx.svg"
+    },
+    {
+      "name": "IoTeX",
+      "chainId": 195,
+      "symbol": "IOTX",
+      "decimals": 18,
+      "address": "0x55021e308A7dcb481818f1eBe972D89646c1d17f",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/iotx.svg"
+    },
+    {
+      "name": "PlayDapp",
+      "chainId": 195,
+      "symbol": "PLA",
+      "decimals": 18,
+      "address": "0x5d706711ceD2f6E1Eb35f874A418c04cd4dBB275",
+      "logoURI": "https://static.stationdex.com/images/currencies/icons/default/pla.svg"
+    }
+  ]
+}

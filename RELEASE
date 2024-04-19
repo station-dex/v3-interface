@@ -1,0 +1,25 @@
+IPFS hash of the deployment:
+- CIDv0: `QmU1QSS7dNky4pkCfkknkmcBKmFfx9m7HctyzzNCTJpBbk`
+- CIDv1: `bafybeicug7zwouvztzcfjasynspfg7kjt76w4pg5m6lsj3iez6d3wbmvf4`
+
+The latest release is always mirrored at [app.uniswap.org](https://app.uniswap.org).
+
+You can also access the Uniswap Interface from an IPFS gateway.
+**BEWARE**: The Uniswap interface uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as which tokens you have imported.
+**You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [app.uniswap.org](https://app.uniswap.org).
+Your Uniswap settings are never remembered across different URLs.
+
+IPFS gateways:
+- https://bafybeicug7zwouvztzcfjasynspfg7kjt76w4pg5m6lsj3iez6d3wbmvf4.ipfs.dweb.link/
+- https://bafybeicug7zwouvztzcfjasynspfg7kjt76w4pg5m6lsj3iez6d3wbmvf4.ipfs.cf-ipfs.com/
+- [ipfs://QmU1QSS7dNky4pkCfkknkmcBKmFfx9m7HctyzzNCTJpBbk/](ipfs://QmU1QSS7dNky4pkCfkknkmcBKmFfx9m7HctyzzNCTJpBbk/)
+
+### 5.5.1 (2024-01-26)
+
+
+### Bug Fixes
+
+* **web): Revert "chore(web:** added opensea api to csp and made long … (#5938) d7aa795
+* **web): Revert "fix(web:** re-enable rich link previews (#5912)" (#5942) b835519
+
+
