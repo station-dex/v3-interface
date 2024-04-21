@@ -1,25 +1,21 @@
-# Uniswap Labs: Front End Interfaces
+# Station DEX: Front End Interfaces
 
-An open source repository for all Uniswap front end interfaces maintained by Uniswap Labs. Uniswap is a protocol for decentralized exchange of Ethereum tokens.
+An open source repository for all Station DEX front end interfaces maintained by Station DEX.
+
+# How to List Your Token in Station Dex?
+
+- Clone the repository
+- Add your token to `apps/web/public/lists/<CHAIN_ID>.json` file.
+- Open a Pull Request (PR), with proper description, and relevant URLs.
+
+We will review your Pull Request, and your token will be ready to trade, after the PR gets merged.
+
 
 ## Interfaces
 
-- Web: [app.uniswap.org](https://app.uniswap.org)
-- Wallet: [wallet.uniswap.org](https://wallet.uniswap.org)
+- Web: [app.stationdex.com](app.stationdex.com)
 
-## Socials / Contact
-
-- Twitter: [@Uniswap](https://twitter.com/Uniswap)
-- Reddit: [/r/Uniswap](https://www.reddit.com/r/Uniswap/)
-- Email: [contact@uniswap.org](mailto:contact@uniswap.org)
-- Discord: [Uniswap](https://discord.gg/FCfyBSbCU5)
-
-## Uniswap Links
-
-- Website: [uniswap.org](https://uniswap.org/)
-- Docs: [uniswap.org/docs/](https://docs.uniswap.org/)
-
-## Whitepapers
+## Uniswap Whitepapers
 
 - [V3](https://uniswap.org/whitepaper-v3.pdf)
 - [V2](https://uniswap.org/whitepaper.pdf)
@@ -30,20 +26,6 @@ An open source repository for all Uniswap front end interfaces maintained by Uni
 For instructions per application or package, see the README published for each application:
 
 - [Web](apps/web/README.md)
-- [Mobile](apps/mobile/README.md)
-
-## Releases
-
-All interface releases are tagged and published to this repository. To browse them easily, see the [Github releases tab](https://github.com/Uniswap/interface/releases).
-
-## Translations
-
-Translations for our applications are done through [crowdin](https://crowdin.com).
-
-| App     | Coverage |
-| ------- | -------- |
-| web     | [![Crowdin](https://badges.crowdin.net/uniswap-interface/localized.svg)](https://crowdin.com/project/uniswap-interface) |
-| mobile  | [![Crowdin](https://badges.crowdin.net/uniswap-wallet/localized.svg)](https://crowdin.com/project/uniswap-wallet) |
 
 ## 🗂 Directory Structure
 
