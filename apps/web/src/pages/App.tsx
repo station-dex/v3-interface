@@ -74,7 +74,7 @@ const MobileBottomBar = styled.div`
 
 const HeaderWrapper = styled.div<{ transparent?: boolean; bannerIsVisible?: boolean; scrollY: number }>`
   ${flexRowNoWrap};
-  background: ${({ theme, transparent }) => !transparent && "linear-gradient(326deg, rgb(0, 81, 169) 0%, rgb(55, 21, 153) 100%)"};
+  background: ${({ theme, transparent }) => !transparent && "linear-gradient(90deg, #146BD3 0%, #7443FF 100%)"};
   border-bottom: ${({ theme, transparent }) => !transparent && `1px solid ${theme.surface3}`};
   width: 100%;
   justify-content: space-between;

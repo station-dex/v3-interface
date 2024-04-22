@@ -143,6 +143,7 @@ export const IntroBg = styled.div<{ show?: boolean }>`
     font-size: 16px;
     line-height: 24px;
     color: ${colors.grayIron500};
+    margin-top: -32px;
   }
 
   div.socials {
@@ -153,11 +154,6 @@ export const IntroBg = styled.div<{ show?: boolean }>`
 
     margin: auto;
     margin-top: 64px;
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 16px;
 
     a {
       color: ${({theme}) => theme.darkMode ? colors.white : colors.grayIron400};
@@ -207,18 +203,6 @@ export const IntroBg = styled.div<{ show?: boolean }>`
       }
     }
   }
-
-  @media (max-height: 849px) {
-    p.info {
-      display: none;
-    }
-  }
-
-  @media (max-width: 767px) {
-    div.socials {
-      bottom: 56px;
-    }
-  }
 `
 
 export const Planet = styled.div<{top: number, left: number}>`
@@ -233,6 +217,8 @@ export const Planet = styled.div<{top: number, left: number}>`
   
   // animate the planets to up and down continuously
   animation: ${() => Math.random() >= 0.5 ? upDownAnimation() : downUpAnimation} 4s infinite alternate ease-in-out;
+
+  opacity: ${({theme}) => theme.darkMode ? 0.35 : 0.6};
   
   .outer {
     filter: blur(10px);
@@ -273,6 +259,8 @@ export const Planet = styled.div<{top: number, left: number}>`
   
   &:hover {
     animation-play-state: paused;
+    opacity: 1;
+
     .outer {
       filter: none;
       

@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import {GlobeIcon, TelegramIcon, TwitterIcon} from "./icons"
 import { ExternalLink } from "react-feather"
 import { IntroBg, Planet } from "./index.style"
@@ -95,13 +95,38 @@ const IntroCloud = ({children}: {children: ReactNode}) => {
   
   const location = useLocation()
   
-  const showIntro = useMemo(() => {
+  const [showIntro, setShowIntro] = useState(false)
+    
+  const navigate = useNavigate()
+    
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    
+    const attemptedWalletConnect = localStorage.getItem('attemptedWalletConnect');
+
     const searchParams = new URLSearchParams(location.search)
-    return (
-      location.pathname === '/swap' && 
-      searchParams.has('intro') && searchParams.get('intro') === 'true'
-    )
-  }, [location.search])
+    const isHome = location.pathname === '/'
+    const hasIntroInUrl = searchParams.has('intro') && searchParams.get('intro') === 'true'
+
+    if(isHome) {
+      if (attemptedWalletConnect && !hasIntroInUrl) {
+        navigate('/swap', { replace: true });
+        return;
+      }
+
+      if(hasIntroInUrl || !attemptedWalletConnect) {
+        setShowIntro(true)
+        return
+      }
+
+      return
+    }
+
+    setShowIntro(false)
+  }, [location, navigate])
 
   useEffect(() => {
     if(!containerRef.current) return;

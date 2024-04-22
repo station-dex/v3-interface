@@ -86,7 +86,7 @@ const baseMenuItem = style([
 export const menuItem = style([
   baseMenuItem,
   sprinkles({
-    color: 'neutral2_dark',
+    color: 'gray300',
   }),
 ])
 

@@ -8,6 +8,7 @@ import Loader from 'components/Icons/LoadingSpinner'
 import { deprecatedInjectedConnection } from 'connection'
 import { ActivationStatus, useActivationState } from 'connection/activate'
 import { Connection } from 'connection/types'
+import { useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { ButtonText, ThemedText } from 'theme/components'
 import { useIsDarkMode } from 'theme/components/ThemeToggle'
@@ -110,6 +111,27 @@ export default function Option({ connection, isRecent }: OptionProps) {
 
   const rightSideDetail = isCurrentOptionPending ? <Loader /> : isRecent ? <RecentBadge /> : null
 
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    const successCallback = () => {
+      toggleAccountDrawer()
+      
+      // update value in local storage 
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('attemptedWalletConnect', 'true')
+      }
+
+      // redirect if on home page
+      if (location.pathname === '/') {
+        navigate('/swap', { replace: true })
+      }
+    }
+
+    tryActivation(connection, successCallback, chainId)
+  }
+
   return (
     <Wrapper disabled={isSomeOptionPending}>
       <TraceEvent
@@ -120,7 +142,7 @@ export default function Option({ connection, isRecent }: OptionProps) {
       >
         <OptionCardClickable
           disabled={isSomeOptionPending}
-          onClick={() => tryActivation(connection, toggleAccountDrawer, chainId)}
+          onClick={handleClick}
           selected={isCurrentOptionPending}
           data-testid={`wallet-option-${connection.type}`}
         >

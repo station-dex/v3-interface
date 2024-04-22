@@ -167,7 +167,7 @@ const Navbar = ({ blur }: { blur: boolean }) => {
                   <ChainSelector />
                 </Box>
               )}
-              {isLandingPage && isNewLandingPageEnabled && <GetTheAppButton />}
+              {/* {isLandingPage && isNewLandingPageEnabled && <GetTheAppButton />} */}
               <Web3Status />
             </Row>
           </Box>

@@ -112,10 +112,7 @@ export const routes: RouteDefinition[] = [
   createRouteDefinition({
     path: '/',
     getTitle: () => t`StationDEX | Trade crypto & NFTs safely on the top DeFi exchange`,
-    getElement: (args) => {
-      return <Navigate to={"/swap"} replace />
-      // return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Landing />
-    },
+    getElement: () => <Swap />,
   }),
   createRouteDefinition({
     path: '/explore',

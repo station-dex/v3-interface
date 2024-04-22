@@ -14,9 +14,8 @@ import { createRoot } from 'react-dom/client'
 import { Helmet } from 'react-helmet'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { Provider } from 'react-redux'
-import { BrowserRouter, HashRouter, useLocation } from 'react-router-dom'
+import { BrowserRouter, useLocation } from 'react-router-dom'
 import { SystemThemeUpdater, ThemeColorMetaUpdater } from 'theme/components/ThemeToggle'
-import { isBrowserRouterEnabled } from 'utils/env'
 import { getCanonicalUrl } from 'utils/urlRoutes'
 
 import Web3Provider from './components/Web3Provider'
@@ -64,7 +63,7 @@ const queryClient = new QueryClient()
 
 const container = document.getElementById('root') as HTMLElement
 
-const Router = isBrowserRouterEnabled() ? BrowserRouter : HashRouter
+const Router = BrowserRouter
 
 createRoot(container).render(
   <StrictMode>
