@@ -29,6 +29,7 @@ import { getCurrentPageFromLocation } from 'utils/urlRoutes'
 import { getCLS, getFCP, getFID, getLCP, Metric } from 'web-vitals'
 
 import { findRouteByPath, RouteDefinition, routes, useRouterConfig } from './RouteDefinitions'
+import IntroCloud from './Landing/components/IntroCloud'
 
 const AppChrome = lazy(() => import('./AppChrome'))
 
@@ -183,28 +184,30 @@ export default function App() {
           <HeaderWrapper bannerIsVisible={renderUkBannner} scrollY={scrollY}>
             <NavBar blur={isHeaderTransparent} />
           </HeaderWrapper>
-          <BodyWrapper bannerIsVisible={renderUkBannner}>
-            <Suspense>
-              <AppChrome />
-            </Suspense>
-              <Suspense fallback={<Loader />}>
-                {isLoaded ? (
-                  <Routes>
-                    {routes.map((route: RouteDefinition) =>
-                      route.enabled(routerConfig) ? (
-                        <Route key={route.path} path={route.path} element={route.getElement(routerConfig)}>
-                          {route.nestedPaths.map((nestedPath) => (
-                            <Route path={nestedPath} key={`${route.path}/${nestedPath}`} />
-                          ))}
-                        </Route>
-                      ) : null
-                    )}
-                  </Routes>
-                ) : (
-                  <Loader />
-                )}
+          <IntroCloud>
+            <BodyWrapper className='BodyWrapper' bannerIsVisible={renderUkBannner}>
+              <Suspense>
+                <AppChrome />
               </Suspense>
-          </BodyWrapper>
+                <Suspense fallback={<Loader />}>
+                  {isLoaded ? (
+                    <Routes>
+                      {routes.map((route: RouteDefinition) =>
+                        route.enabled(routerConfig) ? (
+                          <Route key={route.path} path={route.path} element={route.getElement(routerConfig)}>
+                            {route.nestedPaths.map((nestedPath) => (
+                              <Route path={nestedPath} key={`${route.path}/${nestedPath}`} />
+                            ))}
+                          </Route>
+                        ) : null
+                      )}
+                    </Routes>
+                  ) : (
+                    <Loader />
+                  )}
+                </Suspense>
+            </BodyWrapper>
+          </IntroCloud>
           <MobileBottomBar>
             <PageTabs />
           </MobileBottomBar>

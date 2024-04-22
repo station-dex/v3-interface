@@ -123,6 +123,22 @@ export const colors = {
   success: '#40B66B',
   critical: '#FF5F52',
   scrim: 'rgba(0, 0, 0, 0.60)',
+
+  grayIron300: '#A0A0AB',
+  grayIron400: '#A0A0AB',
+  grayIron500: '#70707B',
+  grayIron800: '#26272B',
+
+  grayTrue50: '#FAFAFA',
+  grayTrue100: '#F5F5F5',
+  grayTrue200: '#E5E5E5',
+  grayTrue300: '#D6D6D6',
+  grayTrue400: '#A3A3A3',
+  grayTrue500: '#737373',
+  grayTrue600: '#525252',
+  grayTrue700: '#424242',
+  grayTrue800: '#292929',
+  grayTrue900: '#141414',
 }
 
 export type ThemeColors = typeof darkTheme
