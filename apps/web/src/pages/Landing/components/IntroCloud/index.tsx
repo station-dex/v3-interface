@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
-import {GlobeIcon, TelegramIcon, TwitterIcon} from "./icons"
+import {GlobeIcon, TelegramIcon, XIcon} from "./icons"
 import { ExternalLink } from "react-feather"
 import { IntroBg, Planet } from "./index.style"
 import PoissonDiskSampling from 'poisson-disk-sampling'
@@ -12,7 +12,7 @@ const introSocials = [
     href: 'https://www.stationdex.com',
   },
   {
-    Icon: TwitterIcon,
+    Icon: XIcon,
     label: 'follow',
     href: 'https://twitter.com/stationdex_',
   },

@@ -218,7 +218,7 @@ export const Planet = styled.div<{top: number, left: number}>`
   // animate the planets to up and down continuously
   animation: ${() => Math.random() >= 0.5 ? upDownAnimation() : downUpAnimation} 4s infinite alternate ease-in-out;
 
-  opacity: ${({theme}) => theme.darkMode ? 0.35 : 0.6};
+  opacity: ${({theme}) => theme.darkMode ? 0.1 : 0.6};
   
   .outer {
     filter: blur(10px);
