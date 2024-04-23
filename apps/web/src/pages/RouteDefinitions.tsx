@@ -99,7 +99,7 @@ export interface RouteDefinition {
 function createRouteDefinition(route: Partial<RouteDefinition>): RouteDefinition {
   return {
     getElement: () => null,
-    getTitle: () => 'Station DEX Interface',
+    getTitle: () => 'StationDEX Interface',
     enabled: () => true,
     path: '/',
     nestedPaths: [],
@@ -111,7 +111,7 @@ function createRouteDefinition(route: Partial<RouteDefinition>): RouteDefinition
 export const routes: RouteDefinition[] = [
   createRouteDefinition({
     path: '/',
-    getTitle: () => t`Station DEX | Trade crypto & NFTs safely on the top DeFi exchange`,
+    getTitle: () => t`StationDEX | Trade crypto & NFTs safely on the top DeFi exchange`,
     getElement: (args) => {
       return <Navigate to={"/swap"} replace />
       // return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Landing />
@@ -133,7 +133,7 @@ export const routes: RouteDefinition[] = [
   }),
   createRouteDefinition({
     path: '/explore/tokens/:chainName/:tokenAddress',
-    getTitle: () => t`Buy & Sell on Station DEX`,
+    getTitle: () => t`Buy & Sell on StationDEX`,
     getElement: () => <TokenDetails />,
     enabled: (args) => true,
   }),
@@ -160,7 +160,7 @@ export const routes: RouteDefinition[] = [
   }),
   createRouteDefinition({
     path: '/explore/pools/:chainName/:poolAddress',
-    getTitle: () => t`Explore Pools on Station DEX`,
+    getTitle: () => t`Explore Pools on StationDEX`,
     getElement: () => (
       <Suspense fallback={null}>
         <PoolDetails />
@@ -170,7 +170,7 @@ export const routes: RouteDefinition[] = [
   }),
   createRouteDefinition({
     path: '/vote/*',
-    getTitle: () => t`Vote on Governance Proposals on Station DEX`,
+    getTitle: () => t`Vote on Governance Proposals on StationDEX`,
     getElement: () => (
       <Suspense fallback={<LazyLoadSpinner />}>
         <Vote />
@@ -179,7 +179,7 @@ export const routes: RouteDefinition[] = [
   }),
   createRouteDefinition({
     path: '/create-proposal',
-    getTitle: () => t`Create a new Governance Proposal on Station DEX`,
+    getTitle: () => t`Create a new Governance Proposal on StationDEX`,
     getElement: () => <Navigate to="/vote/create-proposal" replace />,
   }),
   createRouteDefinition({
@@ -189,49 +189,49 @@ export const routes: RouteDefinition[] = [
   createRouteDefinition({
     path: '/swap',
     getElement: () => <Swap />,
-    getTitle: () => t`Trade Tokens on Station DEX`,
+    getTitle: () => t`Trade Tokens on StationDEX`,
   }),
   createRouteDefinition({
     path: '/pool/v2/find',
     getElement: () => <PoolFinder />,
-    getTitle: () => t`Explore Top Liquidity Pools (v2) on Station DEX`,
+    getTitle: () => t`Explore Top Liquidity Pools (v2) on StationDEX`,
   }),
   createRouteDefinition({
     path: '/pool/v2',
     getElement: () => <PoolV2 />,
-    getTitle: () => t`Provide Liquidity to Pools (v2) on Station DEX`,
+    getTitle: () => t`Provide Liquidity to Pools (v2) on StationDEX`,
   }),
   createRouteDefinition({ path: '/pool', getElement: () => <Pool /> }),
   createRouteDefinition({
     path: '/pool/:tokenId',
     getElement: () => <PositionPage />,
-    getTitle: () => t`Manage Pool Liquidity on Station DEX`,
+    getTitle: () => t`Manage Pool Liquidity on StationDEX`,
   }),
   createRouteDefinition({
     path: '/pools/v2/find',
     getElement: () => <PoolFinder />,
-    getTitle: () => t`Explore Top Liquidity Pools (v2) on Station DEX`,
+    getTitle: () => t`Explore Top Liquidity Pools (v2) on StationDEX`,
   }),
   createRouteDefinition({
     path: '/pools/v2',
     getElement: () => <PoolV2 />,
-    getTitle: () => t`Manage & Provide v2 Pool Liquidity on Station DEX`,
+    getTitle: () => t`Manage & Provide v2 Pool Liquidity on StationDEX`,
   }),
   createRouteDefinition({
     path: '/pools',
     getElement: () => <Pool />,
-    getTitle: () => t`Manage & Provide Pool Liquidity on Station DEX`,
+    getTitle: () => t`Manage & Provide Pool Liquidity on StationDEX`,
   }),
   createRouteDefinition({
     path: '/pools/:tokenId',
     getElement: () => <PositionPage />,
-    getTitle: () => t`Manage Pool Liquidity on Station DEX`,
+    getTitle: () => t`Manage Pool Liquidity on StationDEX`,
   }),
   createRouteDefinition({
     path: '/add/v2',
     nestedPaths: [':currencyIdA', ':currencyIdA/:currencyIdB'],
     getElement: () => <AddLiquidityV2WithTokenRedirects />,
-    getTitle: () => t`Provide Liquidity to Pools (v2) on Station DEX`,
+    getTitle: () => t`Provide Liquidity to Pools (v2) on StationDEX`,
   }),
   createRouteDefinition({
     path: '/add',
@@ -242,17 +242,17 @@ export const routes: RouteDefinition[] = [
       ':currencyIdA/:currencyIdB/:feeAmount/:tokenId',
     ],
     getElement: () => <AddLiquidityWithTokenRedirects />,
-    getTitle: () => t`Provide Liquidity to Pools on Station DEX`,
+    getTitle: () => t`Provide Liquidity to Pools on StationDEX`,
   }),
   createRouteDefinition({
     path: '/remove/v2/:currencyIdA/:currencyIdB',
     getElement: () => <RemoveLiquidity />,
-    getTitle: () => t`Manage v2 Pool Liquidity on Station DEX`,
+    getTitle: () => t`Manage v2 Pool Liquidity on StationDEX`,
   }),
   createRouteDefinition({
     path: '/remove/:tokenId',
     getElement: () => <RemoveLiquidityV3 />,
-    getTitle: () => t`Manage Pool Liquidity on Station DEX`,
+    getTitle: () => t`Manage Pool Liquidity on StationDEX`,
   }),
   createRouteDefinition({
     path: '/migrate/v2',
@@ -272,7 +272,7 @@ export const routes: RouteDefinition[] = [
       </Suspense>
     ),
     enabled: (args) => !args.shouldDisableNFTRoutes,
-    getTitle: () => t`Trade NFTs Across OpenSea & Other Top Marketplaces on Station DEX`,
+    getTitle: () => t`Trade NFTs Across OpenSea & Other Top Marketplaces on StationDEX`,
   }),
   createRouteDefinition({
     path: '/nfts/asset/:contractAddress/:tokenId',
@@ -282,7 +282,7 @@ export const routes: RouteDefinition[] = [
       </Suspense>
     ),
     enabled: (args) => !args.shouldDisableNFTRoutes,
-    getTitle: () => t`Explore NFTs on Station DEX`,
+    getTitle: () => t`Explore NFTs on StationDEX`,
   }),
   createRouteDefinition({
     path: '/nfts/profile',
@@ -292,7 +292,7 @@ export const routes: RouteDefinition[] = [
       </Suspense>
     ),
     enabled: (args) => !args.shouldDisableNFTRoutes,
-    getTitle: () => t`Explore NFTs on Station DEX`,
+    getTitle: () => t`Explore NFTs on StationDEX`,
   }),
   createRouteDefinition({
     path: '/nfts/collection/:contractAddress',
@@ -302,7 +302,7 @@ export const routes: RouteDefinition[] = [
       </Suspense>
     ),
     enabled: (args) => !args.shouldDisableNFTRoutes,
-    getTitle: () => t`Explore NFTs on Station DEX`,
+    getTitle: () => t`Explore NFTs on StationDEX`,
   }),
   createRouteDefinition({
     path: '/nfts/collection/:contractAddress/activity',
@@ -312,7 +312,7 @@ export const routes: RouteDefinition[] = [
       </Suspense>
     ),
     enabled: (args) => !args.shouldDisableNFTRoutes,
-    getTitle: () => t`Explore NFTs on Station DEX`,
+    getTitle: () => t`Explore NFTs on StationDEX`,
   }),
   createRouteDefinition({ path: '*', getElement: () => <Navigate to="/not-found" replace /> }),
   createRouteDefinition({ path: '/not-found', getElement: () => <NotFound /> }),

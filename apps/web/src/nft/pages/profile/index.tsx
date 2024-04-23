@@ -64,14 +64,14 @@ const ConnectWalletButton = styled(ButtonPrimary)`
 
 function getProfilePageTitle(account: string | undefined, ENSName: string | null | undefined): string {
   if (!account) {
-    return t`NFT collection on Station DEX`
+    return t`NFT collection on StationDEX`
   }
 
   if (!ENSName) {
-    return t`NFT collection on Station DEX - ${shortenAddress(account)}`
+    return t`NFT collection on StationDEX - ${shortenAddress(account)}`
   }
 
-  return t`${ENSName}'s NFT collection on Station DEX`
+  return t`${ENSName}'s NFT collection on StationDEX`
 }
 
 export default function Profile() {

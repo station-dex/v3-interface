@@ -1,14 +1,36 @@
-# Station DEX: Front End Interfaces
+# StationDEX: Front End Interfaces
 
-An open source repository for all Station DEX front end interfaces maintained by Station DEX.
+An open source repository for all StationDEX front end interfaces maintained by StationDEX.
 
-# How to List Your Token in Station Dex?
+# How to List Your Token in StationDEX?
 
 - Clone the repository
 - Add your token to `apps/web/public/lists/<CHAIN_ID>.json` file.
 - Open a Pull Request (PR), with proper description, and relevant URLs.
 
-We will review your Pull Request, and your token will be ready to trade, after the PR gets merged.
+Once your pull request is accepted, your token logo will appear in the default token list.
+
+## Contribution Guidelines
+
+Please create PRs using the following template:
+
+᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆
+
+**Project Name:**
+
+**Project Website:**
+
+**Twitter:**
+
+**Github:**
+
+**Description:**
+
+**CoinMarketCap (optional):**
+
+**CoinGecko (optional):**
+
+᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆᠆
 
 
 ## Interfaces

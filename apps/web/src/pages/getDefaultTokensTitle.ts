@@ -6,5 +6,5 @@ export const getDefaultTokensTitle = (path?: string) => {
   const parts = path?.split('/').filter((part) => part !== '')
   const network = parts?.find((part) => getValidUrlChainName(part)) ?? 'ethereum'
 
-  return t`Explore Top Tokens on ${capitalize(network)} on Station DEX`
+  return t`Explore Top Tokens on ${capitalize(network)} on StationDEX`
 }

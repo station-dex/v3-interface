@@ -1,4 +1,4 @@
-# Station DEX Web Interface
+# StationDEX Web Interface
 
 ## Accessing the Uniswap Interface
 
