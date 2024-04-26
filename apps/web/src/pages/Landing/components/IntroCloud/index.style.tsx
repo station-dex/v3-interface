@@ -37,17 +37,65 @@ const blink = keyframes`
 
 `
 
-export const IntroBg = styled.div<{ show?: boolean }>`
+const commonStyles = css`
+  ${({theme: { darkMode }}) =>
+    darkMode 
+      ? css`
+        background: radial-gradient(
+          30% 18% at 50% 0%,
+          #ffffff 0%,
+          #8067c8 45%,
+          #3b396f 67.5%,
+          #18181c 100%
+        );
+      `
+      : css`
+        background: radial-gradient(
+          30% 18% at 50% 0%,
+          #AFAFFF 0%, 
+          #FAFAFA 100%
+        );
+    `
+  }
+
   --header-height: 72px;
+  position: relative;
+  top: var(--header-height);
+
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    ${({theme: { darkMode }}) =>
+    darkMode 
+      ? css`
+        background: radial-gradient(
+          50% 18% at 50% 0%,
+          #ffffff 0%,
+          #8067c8 45%,
+          #3b396f 67.5%,
+          #18181c 100%
+        );
+      `
+      : css`
+        background: radial-gradient(
+          50% 18% at 50% 0%,
+          #AFAFFF 0%, 
+          #FAFAFA 100%
+        );
+      `
+    }
+  }
+`
+
+export const IntroBg = styled.div<{ show?: boolean }>`
   min-height: calc(100vh - var(--header-height));
   width: 100%;
   
-  position: relative;
   z-index: 0;
   padding: 0 16px;
 
-  overflow: hidden;
-  top: var(--header-height);
+
+  ${commonStyles};
 
   
   &::before {
@@ -83,28 +131,6 @@ export const IntroBg = styled.div<{ show?: boolean }>`
   .BodyWrapper {
     padding-top: 0;
     min-height: max-content;
-  }
-
-  ${({show, theme: { darkMode }}) =>
-    show && (
-      darkMode 
-      ? css`
-        background: radial-gradient(
-          30% 18% at 50% 0%,
-          #ffffff 0%,
-          #8067c8 45%,
-          #3b396f 67.5%,
-          #18181c 100%
-        );
-      `
-      : css`
-        background: radial-gradient(
-          30% 18% at 50% 0%,
-          #AFAFFF 0%, 
-          #FAFAFA 100%
-        );
-      `
-    )
   }
 
   background-size: cover;
@@ -167,10 +193,10 @@ export const IntroBg = styled.div<{ show?: boolean }>`
 
         transition: all 0.25s ease-in;
 
-        box-shadow: 0 0 0 0px ${({theme}) => colors.white},
-          0 0 0 0px ${({theme}) => transparentize(0.5, colors.grayTrue400)},
-          0 0 0 0px ${({theme}) => colors.white},
-          0 0 0 0px ${({theme}) => transparentize(0.8, colors.grayTrue400)};
+        box-shadow: 0 0 0 0px ${() => colors.white},
+          0 0 0 0px ${() => transparentize(0.5, colors.grayTrue400)},
+          0 0 0 0px ${() => colors.white},
+          0 0 0 0px ${() => transparentize(0.8, colors.grayTrue400)};
 
         svg {
           width: 24px;
@@ -283,5 +309,16 @@ export const Planet = styled.div<{top: number, left: number}>`
     opacity: 0;
     font-size: 14px;
     color: ${({theme}) => theme.darkMode ? colors.grayIron400 : colors.grayIron500};
+  }
+`
+
+export const Wrapper = styled.div`
+  ${commonStyles};
+
+  height: calc(100vh - var(--header-height));
+
+  .BodyWrapper {
+    padding-top: 0;
+    min-height: max-content;
   }
 `

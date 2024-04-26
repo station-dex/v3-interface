@@ -2,7 +2,7 @@ import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import {GlobeIcon, TelegramIcon, XIcon} from "./icons"
 import { ExternalLink } from "react-feather"
-import { IntroBg, Planet } from "./index.style"
+import { IntroBg, Planet, Wrapper } from "./index.style"
 import PoissonDiskSampling from 'poisson-disk-sampling'
 
 const introSocials = [
@@ -168,7 +168,7 @@ const IntroCloud = ({children}: {children: ReactNode}) => {
 
   return (
     !showIntro ? (
-      <>{children}</>
+      <Wrapper>{children}</Wrapper>
      ) : (
       <IntroBg show={showIntro} ref={containerRef}>
         <p className='intro'>
