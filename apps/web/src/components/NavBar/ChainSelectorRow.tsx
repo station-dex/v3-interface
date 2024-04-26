@@ -7,11 +7,11 @@ import Loader from 'components/Icons/LoadingSpinner'
 import { ChainLogo } from 'components/Logo/ChainLogo'
 import { getChainInfo } from 'constants/chainInfo'
 import { CheckMarkIcon } from 'nft/components/icons'
-import styled, { useTheme } from 'styled-components'
+import styled, { css, useTheme } from 'styled-components'
 
 const LOGO_SIZE = 20
 
-const Container = styled.button<{ disabled: boolean }>`
+export const ContainerStyle = css<{ disabled: boolean }>`
   align-items: center;
   background: none;
   border: none;
@@ -36,6 +36,10 @@ const Container = styled.button<{ disabled: boolean }>`
   &:hover {
     background-color: ${({ disabled, theme }) => (disabled ? 'none' : theme.surface3)};
   }
+`
+
+const Container = styled.button<{ disabled: boolean }>`
+  ${ContainerStyle}
 `
 const Label = styled.div`
   grid-column: 2;

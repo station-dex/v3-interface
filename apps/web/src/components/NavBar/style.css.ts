@@ -93,7 +93,10 @@ export const menuItem = style([
 export const activeMenuItem = style([
   baseMenuItem,
   sprinkles({
-    color: 'neutral1_dark',
+    color: 'gray100',
     background: 'none',
   }),
+  {
+    mixBlendMode: 'difference'
+  }
 ])

@@ -14,8 +14,7 @@ import { Box } from 'nft/components/Box'
 import { Row } from 'nft/components/Flex'
 import { useProfilePageState } from 'nft/hooks'
 import { ProfilePageStateType } from 'nft/types'
-import { GetTheAppButton } from 'pages/Landing/components/DownloadApp/GetTheAppButton'
-import { ReactNode, useCallback } from 'react'
+import React, { ReactNode, useCallback } from 'react'
 import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -23,10 +22,8 @@ import { useIsNavSearchInputVisible } from '../../nft/hooks/useIsNavSearchInputV
 import { Bag } from './Bag'
 import Blur from './Blur'
 import { ChainSelector } from './ChainSelector'
-import { MenuDropdown } from './MenuDropdown'
-import { More } from './More'
-import { SearchBar } from './SearchBar'
 import * as styles from './style.css'
+import ExploreDropdown from './ExploreDropdown'
 
 const Nav = styled.nav`
   padding: ${({ theme }) => `${theme.navVerticalPad}px 12px`};
@@ -93,6 +90,8 @@ export const PageTabs = () => {
           <Trans>Pools</Trans>
         </MenuItem>
       </Box>
+
+      <ExploreDropdown />
       {/* {isNewLandingPageEnabled ? (
         <More />
       ) : (
