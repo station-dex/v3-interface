@@ -60,9 +60,6 @@ const commonStyles = css`
 
   --header-height: 72px;
   position: relative;
-  top: var(--header-height);
-
-  overflow: hidden;
 
   @media (max-width: 767px) {
     ${({theme: { darkMode }}) =>
@@ -125,6 +122,7 @@ export const IntroBg = styled.div<{ show?: boolean }>`
     width: 100%;
     height: 100%;
     top: 0;
+    left: 0;
     overflow: hidden;
   }
 
@@ -142,6 +140,7 @@ export const IntroBg = styled.div<{ show?: boolean }>`
     line-height: 44px;
     position: relative;
     margin-top: 64px;
+    top: var(--header-height);
   }
 
   div.hud {
@@ -227,6 +226,12 @@ export const IntroBg = styled.div<{ show?: boolean }>`
           opacity: 1;
         }
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    p.intro {
+      top: 16px;
     }
   }
 `
@@ -315,7 +320,9 @@ export const Planet = styled.div<{top: number, left: number}>`
 export const Wrapper = styled.div`
   ${commonStyles};
 
-  height: calc(100vh - var(--header-height));
+  top: var(--header-height);
+
+  min-height: calc(100vh - var(--header-height));
 
   .BodyWrapper {
     padding-top: 0;
