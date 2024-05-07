@@ -1,18 +1,32 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client'
-import { Reference, relayStylePagination } from '@apollo/client/utilities'
+import { ApolloClient, ApolloLink, HttpLink, InMemoryCache, from } from '@apollo/client'
+import { Observable, Reference, relayStylePagination } from '@apollo/client/utilities'
 
 const GRAPHQL_URL = process.env.REACT_APP_AWS_API_ENDPOINT
 if (!GRAPHQL_URL) {
   throw new Error('AWS URL MISSING FROM ENVIRONMENT')
 }
 
+const httpLink = new HttpLink({ uri: GRAPHQL_URL });
+
+const skipMiddleware = new ApolloLink(() => {
+  return new Observable(observer => {
+    observer.next({
+      data: undefined,
+    });
+    observer.complete();
+  });
+})
+
 export const apolloClient = new ApolloClient({
   connectToDevTools: true,
-  uri: GRAPHQL_URL,
   headers: {
     'Content-Type': 'application/json',
     Origin: 'https://app.uniswap.org',
   },
+  link: from([
+    skipMiddleware,
+    httpLink
+  ]),
   cache: new InMemoryCache({
     typePolicies: {
       Query: {

@@ -1,6 +1,6 @@
 import { CustomUserProperties, getBrowser, SharedEventName } from '@uniswap/analytics-events'
 import { useWeb3React } from '@web3-react/core'
-import { getDeviceId, sendAnalyticsEvent, sendInitializationEvent, Trace, user } from 'analytics'
+import { sendAnalyticsEvent, sendInitializationEvent, Trace, user } from 'analytics'
 import ErrorBoundary from 'components/ErrorBoundary'
 import Loader from 'components/Icons/LoadingSpinner'
 import NavBar, { PageTabs } from 'components/NavBar'
@@ -15,13 +15,11 @@ import { shouldDisableNFTRoutesAtom } from 'state/application/atoms'
 import { useAppSelector } from 'state/hooks'
 import { AppState } from 'state/reducer'
 import { useRouterPreference } from 'state/user/hooks'
-import { StatsigProvider, StatsigUser } from 'statsig-react'
 import styled from 'styled-components'
 import DarkModeQueryParamReader from 'theme/components/DarkModeQueryParamReader'
 import { useIsDarkMode } from 'theme/components/ThemeToggle'
 import { flexRowNoWrap } from 'theme/styles'
 import { Z_INDEX } from 'theme/zIndex'
-import { STATSIG_DUMMY_KEY } from 'tracing'
 import { isPathBlocked } from 'utils/blockedPaths'
 import { getEnvName } from 'utils/env'
 import { MICROSITE_LINK } from 'utils/openDownloadApp'
@@ -132,15 +130,6 @@ export default function App() {
   const isBagExpanded = useBag((state) => state.bagExpanded)
   const isHeaderTransparent = !scrolledState && !isBagExpanded
 
-  const { account } = useWeb3React()
-  const statsigUser: StatsigUser = useMemo(
-    () => ({
-      userID: getDeviceId(),
-      customIDs: { address: account ?? '' },
-    }),
-    [account]
-  )
-
   // redirect address to landing pages until implemented
   const shouldRedirectToAppInstall = pathname?.startsWith('/address/')
   useLayoutEffect(() => {
@@ -169,49 +158,38 @@ export default function App() {
         <Helmet>
           <title>{findRouteByPath(pathname)?.getTitle(pathname) ?? 'StationDEX Interface'}</title>
         </Helmet>
-        <StatsigProvider
-          user={statsigUser}
-          // TODO: replace with proxy and cycle key
-          sdkKey={STATSIG_DUMMY_KEY}
-          waitForInitialization={false}
-          options={{
-            environment: { tier: getEnvName() },
-            api: process.env.REACT_APP_STATSIG_PROXY_URL,
-          }}
-        >
-          <UserPropertyUpdater />
-          {renderUkBannner && <UkBanner />}
-          <HeaderWrapper bannerIsVisible={renderUkBannner} scrollY={scrollY}>
-            <NavBar blur={isHeaderTransparent} />
-          </HeaderWrapper>
-          <IntroCloud>
-            <BodyWrapper className='BodyWrapper' bannerIsVisible={renderUkBannner}>
-              <Suspense>
-                <AppChrome />
+        <UserPropertyUpdater />
+        {renderUkBannner && <UkBanner />}
+        <HeaderWrapper bannerIsVisible={renderUkBannner} scrollY={scrollY}>
+          <NavBar blur={isHeaderTransparent} />
+        </HeaderWrapper>
+        <IntroCloud>
+          <BodyWrapper className='BodyWrapper' bannerIsVisible={renderUkBannner}>
+            <Suspense>
+              <AppChrome />
+            </Suspense>
+              <Suspense fallback={<Loader />}>
+                {isLoaded ? (
+                  <Routes>
+                    {routes.map((route: RouteDefinition) =>
+                      route.enabled(routerConfig) ? (
+                        <Route key={route.path} path={route.path} element={route.getElement(routerConfig)}>
+                          {route.nestedPaths.map((nestedPath) => (
+                            <Route path={nestedPath} key={`${route.path}/${nestedPath}`} />
+                          ))}
+                        </Route>
+                      ) : null
+                    )}
+                  </Routes>
+                ) : (
+                  <Loader />
+                )}
               </Suspense>
-                <Suspense fallback={<Loader />}>
-                  {isLoaded ? (
-                    <Routes>
-                      {routes.map((route: RouteDefinition) =>
-                        route.enabled(routerConfig) ? (
-                          <Route key={route.path} path={route.path} element={route.getElement(routerConfig)}>
-                            {route.nestedPaths.map((nestedPath) => (
-                              <Route path={nestedPath} key={`${route.path}/${nestedPath}`} />
-                            ))}
-                          </Route>
-                        ) : null
-                      )}
-                    </Routes>
-                  ) : (
-                    <Loader />
-                  )}
-                </Suspense>
-            </BodyWrapper>
-          </IntroCloud>
-          <MobileBottomBar>
-            <PageTabs />
-          </MobileBottomBar>
-        </StatsigProvider>
+          </BodyWrapper>
+        </IntroCloud>
+        <MobileBottomBar>
+          <PageTabs />
+        </MobileBottomBar>
       </Trace>
     </ErrorBoundary>
   )
