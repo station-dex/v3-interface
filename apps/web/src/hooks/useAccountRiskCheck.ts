@@ -8,6 +8,10 @@ export default function useAccountRiskCheck(account: string | null | undefined) 
   useEffect(() => {
     if (!account) return
 
+    const skip = true
+
+    if (skip) return
+
     // TODO: add back local browser cacheing (revisit 11/13/2023)
     const headers = new Headers({ 'Content-Type': 'application/json' })
     fetch('https://api.uniswap.org/v1/screen', {

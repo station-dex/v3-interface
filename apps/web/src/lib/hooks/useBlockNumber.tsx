@@ -83,13 +83,13 @@ export function BlockNumberProvider({ children }: { children: ReactNode }) {
 
   const networkProviders = useFallbackProviderEnabled() ? RPC_PROVIDERS : DEPRECATED_RPC_PROVIDERS
   useEffect(() => {
-    networkProviders[ChainId.MAINNET]
-      .getBlockNumber()
-      .then((block) => {
-        onChainBlock(ChainId.MAINNET, block)
-      })
-      // swallow errors - it's ok if this fails, as we'll try again if we activate mainnet
-      .catch(() => undefined)
+    // networkProviders[ChainId.MAINNET]
+    //   .getBlockNumber()
+    //   .then((block) => {
+    //     onChainBlock(ChainId.MAINNET, block)
+    //   })
+    //   // swallow errors - it's ok if this fails, as we'll try again if we activate mainnet
+    //   .catch(() => undefined)
   }, [networkProviders, onChainBlock])
 
   const value = useMemo(

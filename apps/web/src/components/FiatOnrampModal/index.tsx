@@ -124,7 +124,7 @@ export default function FiatOnrampModal() {
   }, [account, isDarkMode, network, swapUrl, theme.accent1, tokenAddress])
 
   useEffect(() => {
-    fetchSignedIframeUrl()
+    // fetchSignedIframeUrl()
   }, [fetchSignedIframeUrl])
 
   return (
