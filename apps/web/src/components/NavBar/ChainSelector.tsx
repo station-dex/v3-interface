@@ -9,21 +9,24 @@ import { getConnection } from 'connection'
 import { ConnectionType } from 'connection/types'
 import { WalletConnectV2 } from 'connection/WalletConnectV2'
 import { getChainInfo } from 'constants/chainInfo'
-import { getChainPriority, isSupportedChain, L1_CHAIN_IDS, L2_CHAIN_IDS, TESTNET_CHAIN_IDS, UX_SUPPORTED_CHAIN_IDS } from 'constants/chains'
+import { CHAIN_IDS_TO_NAMES, getChainPriority, isSupportedChain, L1_CHAIN_IDS, L2_CHAIN_IDS, TESTNET_CHAIN_IDS, UX_SUPPORTED_CHAIN_IDS } from 'constants/chains'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import useSelectChain from 'hooks/useSelectChain'
 import useSyncChainQuery from 'hooks/useSyncChainQuery'
-import { useAtomValue } from 'jotai/utils'
 import { Portal } from 'nft/components/common/Portal'
 import { Column } from 'nft/components/Flex'
 import { useIsMobile } from 'nft/hooks'
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AlertTriangle, ChevronDown, ChevronUp } from 'react-feather'
 import styled, { useTheme } from 'styled-components'
 import { getSupportedChainIdsFromWalletConnectSession } from 'utils/getSupportedChainIdsFromWalletConnectSession'
 
 import ChainSelectorRow from './ChainSelectorRow'
 import { NavDropdown } from './NavDropdown'
+import { useAtom } from 'jotai'
+import { useParams } from 'react-router-dom'
+import { validateUrlChainParam } from 'graphql/data/util'
+import useParsedQueryString from 'hooks/useParsedQueryString'
 
 const NETWORK_SELECTOR_CHAINS = [...L1_CHAIN_IDS, ...L2_CHAIN_IDS].filter((chainId) => UX_SUPPORTED_CHAIN_IDS.includes(chainId))
 
@@ -67,8 +70,18 @@ export const ChainSelector = ({ leftAlign }: { leftAlign?: boolean }) => {
 
   const theme = useTheme()
 
-  const showTestnets = useAtomValue(showTestnetsAtom)
   const walletSupportsChain = useWalletSupportedChains()
+  
+  const [showTestnets, updateShowTestnets] = useAtom(showTestnetsAtom)
+  
+  const query = useParsedQueryString()
+
+  // set showTestnets to true if the connected chain is x1 testnet or the `chain` query param is x1 testnet
+  useEffect(() => {
+    if(chainId === ChainId.X1_TESTNET || query?.chain === CHAIN_IDS_TO_NAMES[ChainId.X1_TESTNET]) {
+      updateShowTestnets(true)
+    }
+  }, [chainId, query])
 
   const [supportedChains, unsupportedChains] = useMemo(() => {
     const { supported, unsupported } = NETWORK_SELECTOR_CHAINS.filter((chain: number) => {
