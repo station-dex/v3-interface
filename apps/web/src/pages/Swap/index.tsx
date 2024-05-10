@@ -44,7 +44,7 @@ export default function SwapPage({ className }: { className?: string }) {
 
   const { chainId: connectedChainId } = useWeb3React()
   const supportedChainId = asSupportedChain(connectedChainId)
-  const chainId = supportedChainId || ChainId.MAINNET
+  const chainId = supportedChainId || ChainId.X_LAYER_MAINNET
 
   const parsedQs = useParsedQueryString()
   const parsedCurrencyState = useMemo(() => {
