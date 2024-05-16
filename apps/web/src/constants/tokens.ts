@@ -1,5 +1,14 @@
-import { ChainId, Currency, Ether, NativeCurrency, Token, UNI_ADDRESSES, WETH9 } from '@uniswap/sdk-core'
-import invariant from 'tiny-invariant'
+import invariant from "tiny-invariant";
+
+import {
+  ChainId,
+  Currency,
+  Ether,
+  NativeCurrency,
+  Token,
+  UNI_ADDRESSES,
+  WETH9,
+} from "@uniswap/sdk-core";
 
 export const NATIVE_CHAIN_ID = 'NATIVE'
 
@@ -261,7 +270,7 @@ export const USDC_X1_TESTNET = new Token(
 export const USDT_X1_TESTNET = new Token(
   ChainId.X1_TESTNET,
   '0xeb45D32425a02a5A9d8500375932f1cCe5781b96',
-  6,
+  18,
   'USDT',
   'USD Tether'
 )
