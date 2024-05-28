@@ -38,9 +38,11 @@ interface MenuItemProps {
   isActive?: boolean
   children: ReactNode
   dataTestId?: string
+  target?: string
+  rel?: string
 }
 
-const MenuItem = ({ href, dataTestId, id, isActive, children }: MenuItemProps) => {
+const MenuItem = ({ href, dataTestId, id, isActive, children, target, rel }: MenuItemProps) => {
   return (
     <NavLink
       to={href}
@@ -48,6 +50,8 @@ const MenuItem = ({ href, dataTestId, id, isActive, children }: MenuItemProps) =
       id={id}
       style={{ textDecoration: 'none' }}
       data-testid={dataTestId}
+      target={target}
+      rel={rel}
     >
       {children}
     </NavLink>
@@ -90,8 +94,13 @@ export const PageTabs = () => {
           <Trans>Pools</Trans>
         </MenuItem>
       </Box>
-
-      <ExploreDropdown />
+      
+      <Box display={{ sm: 'flex', lg: 'none', xxl: 'flex' }} width="full">
+        <MenuItem href="https://v3-info.stationdex.com/#/xlayer-mainnet" target='_blank' rel='noreferrer noopener'>
+          <Trans>Info</Trans>
+        </MenuItem>
+      </Box>
+      
       {/* {isNewLandingPageEnabled ? (
         <More />
       ) : (
