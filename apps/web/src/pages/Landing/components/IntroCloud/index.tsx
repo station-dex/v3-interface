@@ -4,6 +4,7 @@ import {GlobeIcon, TelegramIcon, XIcon} from "./icons"
 import { ExternalLink } from "react-feather"
 import { IntroBg, Planet, Wrapper } from "./index.style"
 import PoissonDiskSampling from 'poisson-disk-sampling'
+import { useWeb3React } from "@web3-react/core"
 
 const introSocials = [
   {
@@ -98,12 +99,17 @@ const IntroCloud = ({children}: {children: ReactNode}) => {
   const [showIntro, setShowIntro] = useState(false)
     
   const navigate = useNavigate()
+
+  const {account} = useWeb3React()
     
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
     }
 
+    if(account) {
+      localStorage.setItem('attemptedWalletConnect', 'true');
+    }
     
     const attemptedWalletConnect = localStorage.getItem('attemptedWalletConnect');
 
@@ -126,7 +132,7 @@ const IntroCloud = ({children}: {children: ReactNode}) => {
     }
 
     setShowIntro(false)
-  }, [location, navigate])
+  }, [location, navigate, account])
 
   useEffect(() => {
     if(!containerRef.current) return;

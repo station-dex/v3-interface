@@ -14,8 +14,7 @@ import { Box } from 'nft/components/Box'
 import { Row } from 'nft/components/Flex'
 import { useProfilePageState } from 'nft/hooks'
 import { ProfilePageStateType } from 'nft/types'
-import { GetTheAppButton } from 'pages/Landing/components/DownloadApp/GetTheAppButton'
-import { ReactNode, useCallback } from 'react'
+import React, { ReactNode, useCallback } from 'react'
 import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -23,10 +22,8 @@ import { useIsNavSearchInputVisible } from '../../nft/hooks/useIsNavSearchInputV
 import { Bag } from './Bag'
 import Blur from './Blur'
 import { ChainSelector } from './ChainSelector'
-import { MenuDropdown } from './MenuDropdown'
-import { More } from './More'
-import { SearchBar } from './SearchBar'
 import * as styles from './style.css'
+import ExploreDropdown from './ExploreDropdown'
 
 const Nav = styled.nav`
   padding: ${({ theme }) => `${theme.navVerticalPad}px 12px`};
@@ -41,9 +38,11 @@ interface MenuItemProps {
   isActive?: boolean
   children: ReactNode
   dataTestId?: string
+  target?: string
+  rel?: string
 }
 
-const MenuItem = ({ href, dataTestId, id, isActive, children }: MenuItemProps) => {
+const MenuItem = ({ href, dataTestId, id, isActive, children, target, rel }: MenuItemProps) => {
   return (
     <NavLink
       to={href}
@@ -51,6 +50,8 @@ const MenuItem = ({ href, dataTestId, id, isActive, children }: MenuItemProps) =
       id={id}
       style={{ textDecoration: 'none' }}
       data-testid={dataTestId}
+      target={target}
+      rel={rel}
     >
       {children}
     </NavLink>
@@ -93,6 +94,13 @@ export const PageTabs = () => {
           <Trans>Pools</Trans>
         </MenuItem>
       </Box>
+      
+      <Box display={{ sm: 'flex', lg: 'none', xxl: 'flex' }} width="full">
+        <MenuItem href="https://v3-info.stationdex.com/#/xlayer-mainnet" target='_blank' rel='noreferrer noopener'>
+          <Trans>Info</Trans>
+        </MenuItem>
+      </Box>
+      
       {/* {isNewLandingPageEnabled ? (
         <More />
       ) : (
