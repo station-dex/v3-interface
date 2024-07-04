@@ -5,5 +5,5 @@ export function useEip6963EnabledFlag(): BaseVariant {
 }
 
 export function useEip6963Enabled(): boolean {
-  return useEip6963EnabledFlag() === BaseVariant.Enabled
+  return true
 }
