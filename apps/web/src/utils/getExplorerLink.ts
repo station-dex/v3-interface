@@ -16,7 +16,7 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [ChainId.AVALANCHE]: 'https://snowtrace.io',
   [ChainId.BASE]: 'https://basescan.org',
   [ChainId.X1_TESTNET]: 'https://www.oklink.com/xlayer-test',
-  [ChainId.X_LAYER_MAINNET]: 'https://www.oklink.com/xlayer',
+  [ChainId.X_LAYER_MAINNET]: 'https://www.okx.com/web3/explorer/xlayer',
 }
 
 export enum ExplorerDataType {

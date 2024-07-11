@@ -243,7 +243,7 @@ const CHAIN_INFO: ChainInfoMap = {
     blockWaitMsBeforeWarning: ms(`10m`),
     bridge: 'https://bridge.arbitrum.io/',
     docs: 'https://www.okx.com/xlayer/docs',
-    explorer: 'https://www.oklink.com/xlayer/',
+    explorer: 'https://www.okx.com/web3/explorer/xlayer',
     infoLink: 'https://info.uniswap.org/#/okb/', // TODO(WEB-2336): Add avax support to info site
     label: 'X Layer Mainnet',
     defaultListUrl: UNI_LIST, // TODO: use arbitrum goerli token list
