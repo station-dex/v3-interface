@@ -106,24 +106,25 @@ export enum ExplorerDataType {
  */
 export function getExplorerLink(chainId: ChainId, data: string, type: ExplorerDataType): string {
   const prefix = CHAIN_INFO[chainId].explorer.url
+  const suffix = "?channelId=Statio"
 
   switch (type) {
     case ExplorerDataType.TRANSACTION:
-      return `${prefix}tx/${data}`
+      return `${prefix}tx/${data}${suffix}`
 
     case ExplorerDataType.TOKEN:
-      return `${prefix}token/${data}`
+      return `${prefix}token/${data}${suffix}`
 
     case ExplorerDataType.BLOCK:
       if (chainId === ChainId.Optimism) {
-        return `${prefix}tx/${data}`
+        return `${prefix}tx/${data}${suffix}`
       }
-      return `${prefix}block/${data}`
+      return `${prefix}block/${data}${suffix}`
 
     case ExplorerDataType.ADDRESS:
-      return `${prefix}address/${data}`
+      return `${prefix}address/${data}${suffix}`
     default:
-      return `${prefix}`
+      return `${prefix}${suffix}`
   }
 }
 
